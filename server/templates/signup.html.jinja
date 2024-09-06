@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+</head>
+<body>
+
+    <form method="POST">
+    <div class="form_infos">
+        <label for="firstname">Prénom <span>*</span></label> <br>
+        <input type="text" id="firstname" name="firstname" placeholder="Votre prénom" /><br><br>
+
+        <label for="lastname">Nom</label><br>
+        <input type="text" id="lastname" name="lastname" placeholder="Votre nom"/><br><br>
+
+        <label for="mail">Adresse mail <span>*</span></label><br>
+        <input type="text" id="mail" name="mail" placeholder="Votre adresse mail"/><br><br>
+
+        <label for="mail">Date de naissance <span>*</span></label><br>
+        <input type="date" id="birthday" name="birthday" placeholder="Votre date de naissance"/><br><br>
+
+        <label for="mail">Numéro de téléphone <span>*</span></label><br>
+        <input type="number" id="phone" name="phone" placeholder="Votre numero de téléphone"/><br><br>
+
+        <label for="password">Mot de passe <span>*</span></label><br>
+        <input type="password" id="password" name="password" placeholder="Votre mot de passe"/><br><br>
+
+        <button>S'inscrire</button>
+
+        <a href="{{ url_for('login') }}">Se connecter</a>
+    </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon profil</title>
+</head>
+<body>
+
+<div class="infos_user">
+    <div class="user">
+    <h1>Bienvenue <span>{{ firstname }} </span>!</h1>
+    <div class="user_container">
+    <h3>Mes informations :</h3>
+    <ul>
+        <li><strong>Prénom :</strong> {{ firstname }}</li>
+        {% if lastname %}
+        <li><strong>Nom :</strong> {{ lastname }}</li>
+        {% endif %}
+        <li><strong>Adresse mail :</strong> {{ mail }}</li>
+        <li><strong>Date de naissance :</strong> {{ birthday }}</li>
+        <li><strong>Numéro de téléphone</strong> {{ phone }}</li>
+
+    </ul>
+
+        <a href="{{ url_for('login') }}">Se deconnecter</a>
+
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
