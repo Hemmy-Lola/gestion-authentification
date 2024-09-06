@@ -4,33 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-   
 </head>
 <body>
-    <h1>Connectez-vous à votre compte </h1>
-    <form method="POST">
-<div class="form_infos">
-        <label for="mail">Adresse mail <span>*</span></label><br>
-        {% if mail %}
-        <input type="text" id="mail" name="mail" placeholder="Votre mail" value="{{ mail }}"/><br><br>
-        {% else %}
-        <input type="text" id="mail" name="mail" placeholder="Votre mail"/><br><br>
-        {% endif %}
-        <label for="password">Mot de passe <span>*</span></label><br>
-        <input type="password" id="password" name="password" placeholder="Votre mot de passe" /><br><br>
+    <h1>Connectez-vous à votre compte</h1>
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="form_infos">
+            <label for="email">Adresse mail <span>*</span></label><br>
+            {% if email %}
+            <input type="text" id="email" name="email" placeholder="Votre mail" value="{{ email }}"/><br><br>
+            {% else %}
+            <input type="text" id="email" name="email" placeholder="Votre mail"/><br><br>
+            {% endif %}
+            <label for="password">Mot de passe <span>*</span></label><br>
+            <input type="password" id="password" name="password" placeholder="Votre mot de passe" /><br><br>
 
-        <button>Se connecter</button><br><br>
+            <button type="submit">Se connecter</button><br><br>
 
+            {% if email %}
+            <input type="checkbox" id="remember" name="remember" checked>
+            {% else %}
+            <input type="checkbox" id="remember" name="remember">
+            {% endif %}
 
-        {% if mail %}
-        <input type="checkbox" id="remember" name="remember" checked>
-        {% else %}
-        <input type="checkbox" id="remember" name="remember">
-        {% endif %}
-
-        <label for="remember">Enregistrer l'adresse mail </label>
-</div>
+            <label for="remember">Enregistrer l'adresse mail </label>
+        </div>
     </form>
-        <a href="{{ url_for('signup') }}">S'inscrire</a>
+    <a href="{{ url_for('signup') }}">S'inscrire</a>
 </body>
 </html>

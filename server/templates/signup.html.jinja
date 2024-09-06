@@ -15,20 +15,20 @@
         <label for="lastname">Nom</label><br>
         <input type="text" id="lastname" name="lastname" placeholder="Votre nom"/><br><br>
 
-        <label for="mail">Adresse mail <span>*</span></label><br>
-        <input type="text" id="mail" name="mail" placeholder="Votre adresse mail"/><br><br>
+        <label for="email">Adresse mail <span>*</span></label><br>
+        <input type="text" id="email" name="email" placeholder="Votre adresse email"/><br><br>
 
-        <label for="mail">Date de naissance <span>*</span></label><br>
-        <input type="date" id="birthday" name="birthday" placeholder="Votre date de naissance"/><br><br>
+        <label for="birthday">Date de naissance <span>*</span></label><br>
+        <input type="date" id="birthday" name="birthday"/><br><br>
 
-        <label for="mail">Numéro de téléphone <span>*</span></label><br>
-        <input type="number" id="phone" name="phone" placeholder="Votre numero de téléphone"/><br><br>
+        <label for="phone">Numéro de téléphone <span>*</span></label><br>
+        <input type="number" id="phone" name="phone" placeholder="Votre numéro de téléphone"/><br><br>
 
         <label for="password">Mot de passe <span>*</span></label><br>
         <input type="password" id="password" name="password" placeholder="Votre mot de passe"/><br><br>
 
-        <button>S'inscrire</button>
-
+        <button type="submit">S'inscrire</button> <!-- Utiliser un bouton submit -->
+        
         <a href="{{ url_for('login') }}">Se connecter</a>
     </div>
     </form>

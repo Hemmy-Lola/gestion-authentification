@@ -17,13 +17,14 @@
         {% if lastname %}
         <li><strong>Nom :</strong> {{ lastname }}</li>
         {% endif %}
-        <li><strong>Adresse mail :</strong> {{ mail }}</li>
+        <li><strong>Adresse mail :</strong> {{ email }}</li>
         <li><strong>Date de naissance :</strong> {{ birthday }}</li>
-        <li><strong>Numéro de téléphone</strong> {{ phone }}</li>
-
+        <li><strong>Numéro de téléphone :</strong> {{ phone }}</li>
     </ul>
 
-        <a href="{{ url_for('login') }}">Se deconnecter</a>
+        <form action="{{ url_for('logout') }}" method="post">
+            <button type="submit">Se déconnecter</button>
+        </form>
 
     </div>
     </div>
